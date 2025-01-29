@@ -15,3 +15,4 @@ class Product(models.Model):
     stock = models.IntegerField()
     is_available = models.BooleanField()
     picture = models.URLField()
+    is_delete = models.BooleanField(default=False)
