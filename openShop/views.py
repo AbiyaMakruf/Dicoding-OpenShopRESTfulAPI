@@ -16,7 +16,17 @@ class ProductList(APIView):
         return Response(product.error, status=status.HTTP_400_BAD_REQUEST)
     
     def get(self, request):
+        name = request.GET.get('name', None)
+        location = request.GET.get('location', None)
+
         product = Product.objects.all()
+
+        if name:
+            product = product.filter(name__icontains=name)
+
+        if location:
+            product = product.filter(location__icontains=location)
+
         serializer = ProductSerializer(product, many=True, context={'request':request})
         return Response({
             "products": serializer.data
@@ -45,5 +55,6 @@ class ProductDetail(APIView):
     
     def delete(self, request, pk):
         product = self.get_object(pk)
-        product.delete()
+        product.is_delete = True
+        product.save()
         return Response(status=status.HTTP_204_NO_CONTENT)
