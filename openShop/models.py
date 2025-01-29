@@ -14,4 +14,4 @@ class Product(models.Model):
     category = models.CharField(max_length=25)
     stock = models.IntegerField()
     is_available = models.BooleanField()
-    picture = models.ImageField()
+    picture = models.URLField()
