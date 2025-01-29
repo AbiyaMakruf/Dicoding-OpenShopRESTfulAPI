@@ -6,7 +6,7 @@ class Product(models.Model):
     id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=False)
     name = models.CharField(max_length=50)
     shop =  models.CharField(max_length=25)
-    price = models.FloatField()
+    price = models.IntegerField()
     sku = models.CharField(max_length=5)
     description = models.TextField()
     location = models.CharField(max_length=50)
