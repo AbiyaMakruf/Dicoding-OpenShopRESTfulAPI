@@ -1,6 +1,6 @@
 # Proyek Akhir: Belajar Back-End Pemula dengan Python
 ## Penilaian Proyek
-Proyek ini berhasil mendapatkan bintang ?/5 pada submission dicoding course Belajar Back-End Pemula dengan Python.
+Proyek ini berhasil mendapatkan bintang 5/5 pada submission dicoding course Belajar Back-End Pemula dengan Python.
 
 ![Penilaian Proyek](README/penilaian_proyek.png)
 
